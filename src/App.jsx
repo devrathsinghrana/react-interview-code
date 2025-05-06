@@ -7,6 +7,7 @@ import DebouncingUsingHook from "./apps/DebouncingUsingHook";
 import DebouncingUsingLodash from "./apps/DebouncingUsingLodash";
 import DebouncingUsingSetTimeout from "./apps/DebouncingUsingSetTimeout";
 import PaymentComponent from "./apps/PaymentComponent";
+import GetTotalScoreObjectForStudents from "./apps/GetTotalScoreObjectForStudents";
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
       <div>
         <Link to={"/payment-app"}>Payment App</Link>
       </div>
+      <div>
+        <Link to={"/total-score-obj"}>Total score of students App</Link>
+      </div>
       <Routes>
         <Route index element={<ThrottlingUsingCustomHooks />} />
         <Route path="/payment-app" element={<PaymentComponent />} />
@@ -44,6 +48,10 @@ function App() {
 
         <Route path="/hook-debounce" element={<DebouncingUsingHook />} />
         <Route path="/load-ash-debounce" element={<DebouncingUsingLodash />} />
+        <Route
+          path="/total-score-obj"
+          element={<GetTotalScoreObjectForStudents />}
+        />
         <Route
           path="/settimeout-debounce"
           element={<DebouncingUsingSetTimeout />}
