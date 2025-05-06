@@ -6,6 +6,7 @@ import { Link, Route, Routes } from "react-router";
 import DebouncingUsingHook from "./apps/DebouncingUsingHook";
 import DebouncingUsingLodash from "./apps/DebouncingUsingLodash";
 import DebouncingUsingSetTimeout from "./apps/DebouncingUsingSetTimeout";
+import PaymentComponent from "./apps/PaymentComponent";
 
 function App() {
   return (
@@ -29,9 +30,12 @@ function App() {
       <div>
         <Link to={"/settimeout-debounce"}>Debouncing using settimeout</Link>
       </div>
-
+      <div>
+        <Link to={"/payment-app"}>Payment App</Link>
+      </div>
       <Routes>
         <Route index element={<ThrottlingUsingCustomHooks />} />
+        <Route path="/payment-app" element={<PaymentComponent />} />
         <Route path="/load-ash-throttle" element={<ThrottlingUsingLoadash />} />
         <Route
           path="/settimeout-throttle"
