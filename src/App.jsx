@@ -9,6 +9,10 @@ import DebouncingUsingSetTimeout from "./apps/DebouncingUsingSetTimeout";
 import PaymentComponent from "./apps/PaymentComponent";
 import GetTotalScoreObjectForStudents from "./apps/GetTotalScoreObjectForStudents";
 import PostfixEvaluatorApp from "./apps/PostfixEvaluatorApp";
+import UniqueTripletsInArray from "./apps/UniqueTripletsInArray";
+import GroupSameCategoryObjects from "./apps/GroupSameCategoryObjects";
+import OptionalSpreadingApp from "./apps/OptionalSpreadingApp";
+import SetVsMap from "./apps/SetVsMap";
 
 function App() {
   return (
@@ -22,7 +26,6 @@ function App() {
       <div>
         <Link to={"/settimeout-throttle"}>Throttle using settimeout</Link>
       </div>
-
       <div>
         <Link to={"/hook-debounce"}>Debouncing using custom hooks</Link>
       </div>
@@ -41,7 +44,22 @@ function App() {
       <div>
         <Link to={"/postfix-evaluator"}>Postfix Evaluator App</Link>
       </div>
-
+      <div>
+        <Link to={"/unique-triplet-in-array-sum-zero"}>
+          Unique triplet in array sum zero App
+        </Link>
+      </div>
+      <div>
+        <Link to={"/group-same-cat-objects"}>
+          Group Same Category Objects App
+        </Link>
+      </div>
+      <div>
+        <Link to={"/optional-spreading"}>Optional Spreading App</Link>
+      </div>
+      <div>
+        <Link to={"/set-vs-map"}>Set vs Map App</Link>
+      </div>
       <Routes>
         <Route index element={<ThrottlingUsingCustomHooks />} />
         <Route path="/payment-app" element={<PaymentComponent />} />
@@ -54,6 +72,17 @@ function App() {
         <Route path="/hook-debounce" element={<DebouncingUsingHook />} />
         <Route path="/load-ash-debounce" element={<DebouncingUsingLodash />} />
         <Route path="/postfix-evaluator" element={<PostfixEvaluatorApp />} />
+        <Route path="/optional-spreading" element={<OptionalSpreadingApp />} />
+
+        <Route
+          path="/group-same-cat-objects"
+          element={<GroupSameCategoryObjects />}
+        />
+
+        <Route
+          path="/unique-triplet-in-array-sum-zero"
+          element={<UniqueTripletsInArray />}
+        />
         <Route
           path="/total-score-obj"
           element={<GetTotalScoreObjectForStudents />}
@@ -62,6 +91,7 @@ function App() {
           path="/settimeout-debounce"
           element={<DebouncingUsingSetTimeout />}
         />
+        <Route path="/set-vs-map" element={<SetVsMap />} />
       </Routes>
     </>
   );
