@@ -8,6 +8,7 @@ import DebouncingUsingLodash from "./apps/DebouncingUsingLodash";
 import DebouncingUsingSetTimeout from "./apps/DebouncingUsingSetTimeout";
 import PaymentComponent from "./apps/PaymentComponent";
 import GetTotalScoreObjectForStudents from "./apps/GetTotalScoreObjectForStudents";
+import PostfixEvaluatorApp from "./apps/PostfixEvaluatorApp";
 
 function App() {
   return (
@@ -37,6 +38,10 @@ function App() {
       <div>
         <Link to={"/total-score-obj"}>Total score of students App</Link>
       </div>
+      <div>
+        <Link to={"/postfix-evaluator"}>Postfix Evaluator App</Link>
+      </div>
+
       <Routes>
         <Route index element={<ThrottlingUsingCustomHooks />} />
         <Route path="/payment-app" element={<PaymentComponent />} />
@@ -48,6 +53,7 @@ function App() {
 
         <Route path="/hook-debounce" element={<DebouncingUsingHook />} />
         <Route path="/load-ash-debounce" element={<DebouncingUsingLodash />} />
+        <Route path="/postfix-evaluator" element={<PostfixEvaluatorApp />} />
         <Route
           path="/total-score-obj"
           element={<GetTotalScoreObjectForStudents />}
