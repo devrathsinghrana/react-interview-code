@@ -1,5 +1,9 @@
-import { put, takeLatest, delay } from 'redux-saga/effects';
-import { initiatePayment, paymentSuccess, paymentFailure } from './paymentSlice';
+import { put, takeLatest, delay } from "redux-saga/effects";
+import {
+  initiatePayment,
+  paymentSuccess,
+  paymentFailure,
+} from "./paymentSlice";
 
 function* handlePayment(action) {
   try {
