@@ -1,6 +1,5 @@
 import React from "react";
 import ThrottlingUsingCustomHooks from "./apps/ThrottlingUsingCustomHooks";
-import ThrottledUsingSettimeout from "./apps/ThrottledUsingSettimeout";
 import ThrottlingUsingLoadash from "./apps/ThrottlingUsingLoadash";
 import { Link, Route, Routes } from "react-router";
 import DebouncingUsingHook from "./apps/DebouncingUsingHook";
@@ -23,9 +22,6 @@ function App() {
       </div>
       <div>
         <Link to={"/load-ash-throttle"}>Throttle using loadash</Link>
-      </div>
-      <div>
-        <Link to={"/settimeout-throttle"}>Throttle using settimeout</Link>
       </div>
       <div>
         <Link to={"/hook-debounce"}>Debouncing using custom hooks</Link>
@@ -69,22 +65,15 @@ function App() {
         <Route index element={<ThrottlingUsingCustomHooks />} />
         <Route path="/payment-app" element={<PaymentComponent />} />
         <Route path="/load-ash-throttle" element={<ThrottlingUsingLoadash />} />
-        <Route
-          path="/settimeout-throttle"
-          element={<ThrottledUsingSettimeout />}
-        />
-
         <Route path="/hook-debounce" element={<DebouncingUsingHook />} />
         <Route path="/load-ash-debounce" element={<DebouncingUsingLodash />} />
         <Route path="/postfix-evaluator" element={<PostfixEvaluatorApp />} />
         <Route path="/optional-spreading" element={<OptionalSpreadingApp />} />
         <Route path="/retry-payment-saga" element={<RetryPaymentApp />} />
-
         <Route
           path="/group-same-cat-objects"
           element={<GroupSameCategoryObjects />}
         />
-
         <Route
           path="/unique-triplet-in-array-sum-zero"
           element={<UniqueTripletsInArray />}
