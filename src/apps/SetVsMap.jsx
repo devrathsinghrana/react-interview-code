@@ -92,6 +92,28 @@ const SetVsMap = () => {
 
   console.log(ComponentToRender);
 
+  const user1 = { id: 1, name: "Alice" };
+  const user2 = { id: 2, name: "Bob" };
+  const user3 = { id: 1, name: "Alice" }; // different reference, same content as user1
+
+  const actions = [
+    user1,
+    user2,
+    user1,
+    user3,
+    user2,
+    user2,
+  ];
+
+  const mapCounts = new Map();
+
+  for (const user of actions) {
+    mapCounts.set(user, (mapCounts.get(user) || 0) + 1);
+  }
+
+  for (const [user, count] of mapCounts.entries()) {
+    console.log(user.name + " (id: " + user.id + " ) => " + count);
+  }
   `;
   new Function(codeString)();
 
