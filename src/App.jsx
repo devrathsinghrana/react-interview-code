@@ -13,6 +13,7 @@ import GroupSameCategoryObjects from "./apps/GroupSameCategoryObjects";
 import OptionalSpreadingApp from "./apps/OptionalSpreadingApp";
 import SetVsMap from "./apps/SetVsMap";
 import RetryPaymentApp from "./apps/RetryPaymentApp";
+import MakingInputUsingCreateElement from "./apps/MakingInputUsingCreateElement";
 
 function App() {
   return (
@@ -60,6 +61,9 @@ function App() {
       <div>
         <Link to={"/retry-payment-saga"}>Retry Payment App</Link>
       </div>
+      <div>
+        <Link to={"/react-create-element"}>React Create Element App</Link>
+      </div>
 
       <Routes>
         <Route index element={<ThrottlingUsingCustomHooks />} />
@@ -87,6 +91,10 @@ function App() {
           element={<DebouncingUsingSetTimeout />}
         />
         <Route path="/set-vs-map" element={<SetVsMap />} />
+        <Route
+          path="/react-create-element"
+          element={<MakingInputUsingCreateElement />}
+        />
       </Routes>
     </>
   );
