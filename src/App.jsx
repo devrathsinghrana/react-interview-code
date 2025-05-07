@@ -13,6 +13,7 @@ import UniqueTripletsInArray from "./apps/UniqueTripletsInArray";
 import GroupSameCategoryObjects from "./apps/GroupSameCategoryObjects";
 import OptionalSpreadingApp from "./apps/OptionalSpreadingApp";
 import SetVsMap from "./apps/SetVsMap";
+import RetryPaymentApp from "./apps/RetryPaymentApp";
 
 function App() {
   return (
@@ -60,6 +61,10 @@ function App() {
       <div>
         <Link to={"/set-vs-map"}>Set vs Map App</Link>
       </div>
+      <div>
+        <Link to={"/retry-payment-saga"}>Retry Payment App</Link>
+      </div>
+
       <Routes>
         <Route index element={<ThrottlingUsingCustomHooks />} />
         <Route path="/payment-app" element={<PaymentComponent />} />
@@ -73,6 +78,7 @@ function App() {
         <Route path="/load-ash-debounce" element={<DebouncingUsingLodash />} />
         <Route path="/postfix-evaluator" element={<PostfixEvaluatorApp />} />
         <Route path="/optional-spreading" element={<OptionalSpreadingApp />} />
+        <Route path="/retry-payment-saga" element={<RetryPaymentApp />} />
 
         <Route
           path="/group-same-cat-objects"
