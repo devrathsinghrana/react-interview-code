@@ -55,6 +55,11 @@ Overall, I used these concepts to write more dynamic, reusable, and robust JavaS
 
 ✅ Implemented apply() to handle dynamic argument lists in analytics and logging utilities, improving code reusability and flexibility.
 
+Feature	            .call()	                           .bind()
+Invokes function	Yes	                               No (returns new function)
+Sets this	        Yes	                               Yes
+Use case	        Immediate function invocation	   Deferred/later function execution
+
 */
 `;
 
