@@ -14,6 +14,7 @@ import OptionalSpreadingApp from "./apps/OptionalSpreadingApp";
 import SetVsMap from "./apps/SetVsMap";
 import RetryPaymentApp from "./apps/RetryPaymentApp";
 import MakingInputUsingCreateElement from "./apps/MakingInputUsingCreateElement";
+import CallApplyBind from "./apps/CallApplyBind";
 
 function App() {
   return (
@@ -64,6 +65,9 @@ function App() {
       <div>
         <Link to={"/react-create-element"}>React Create Element App</Link>
       </div>
+      <div>
+        <Link to={"/call-apply-bind"}>Call Apply Bind App</Link>
+      </div>
 
       <Routes>
         <Route index element={<ThrottlingUsingCustomHooks />} />
@@ -91,6 +95,7 @@ function App() {
           element={<DebouncingUsingSetTimeout />}
         />
         <Route path="/set-vs-map" element={<SetVsMap />} />
+        <Route path="/call-apply-bind" element={<CallApplyBind />} />
         <Route
           path="/react-create-element"
           element={<MakingInputUsingCreateElement />}
