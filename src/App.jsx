@@ -15,6 +15,7 @@ import SetVsMap from "./apps/SetVsMap";
 import RetryPaymentApp from "./apps/RetryPaymentApp";
 import MakingInputUsingCreateElement from "./apps/MakingInputUsingCreateElement";
 import CallApplyBind from "./apps/CallApplyBind";
+import FunctionCurryingAndRecusrsion from "./apps/FunctionCurryingAndRecusrsion";
 
 function App() {
   return (
@@ -68,6 +69,9 @@ function App() {
       <div>
         <Link to={"/call-apply-bind"}>Call Apply Bind App</Link>
       </div>
+      <div>
+        <Link to={"/currying-recursion"}>curryin and recursion</Link>
+      </div>
 
       <Routes>
         <Route index element={<ThrottlingUsingCustomHooks />} />
@@ -78,6 +82,10 @@ function App() {
         <Route path="/postfix-evaluator" element={<PostfixEvaluatorApp />} />
         <Route path="/optional-spreading" element={<OptionalSpreadingApp />} />
         <Route path="/retry-payment-saga" element={<RetryPaymentApp />} />
+        <Route
+          path="/currying-recursion"
+          element={<FunctionCurryingAndRecusrsion />}
+        />
         <Route
           path="/group-same-cat-objects"
           element={<GroupSameCategoryObjects />}
