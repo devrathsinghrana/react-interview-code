@@ -16,6 +16,7 @@ import RetryPaymentApp from "./apps/RetryPaymentApp";
 import MakingInputUsingCreateElement from "./apps/MakingInputUsingCreateElement";
 import CallApplyBind from "./apps/CallApplyBind";
 import FunctionCurryingAndRecusrsion from "./apps/FunctionCurryingAndRecusrsion";
+import CartPage from "./apps/CartPage";
 
 function App() {
   return (
@@ -72,6 +73,9 @@ function App() {
       <div>
         <Link to={"/currying-recursion"}>curryin and recursion</Link>
       </div>
+      <div>
+        <Link to={"/cart-app"}>Cart App</Link>
+      </div>
 
       <Routes>
         <Route index element={<ThrottlingUsingCustomHooks />} />
@@ -82,6 +86,7 @@ function App() {
         <Route path="/postfix-evaluator" element={<PostfixEvaluatorApp />} />
         <Route path="/optional-spreading" element={<OptionalSpreadingApp />} />
         <Route path="/retry-payment-saga" element={<RetryPaymentApp />} />
+        <Route path="/cart-app" element={<CartPage />} />
         <Route
           path="/currying-recursion"
           element={<FunctionCurryingAndRecusrsion />}
