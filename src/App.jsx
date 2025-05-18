@@ -18,6 +18,7 @@ import CallApplyBind from "./apps/CallApplyBind";
 import FunctionCurryingAndRecusrsion from "./apps/FunctionCurryingAndRecusrsion";
 import CartPage from "./apps/CartPage";
 import WeakSetWeakMap from "./apps/WeakSetWeakMap";
+import TailwindCssApp from "./apps/TailwindCssApp";
 
 function App() {
   return (
@@ -81,11 +82,15 @@ function App() {
         <div>
           <Link to={"/weak-set-map-app"}>Weak Set Map App</Link>
         </div>
+        <div>
+          <Link to={"/tailwind-css-example"}>Tailwind css example App</Link>
+        </div>
       </div>
 
       <Routes>
         <Route index element={<ThrottlingUsingCustomHooks />} />
         <Route path="/payment-app" element={<PaymentComponent />} />
+        <Route path="/tailwind-css-example" element={<TailwindCssApp />} />
         <Route path="/weak-set-map-app" element={<WeakSetWeakMap />} />
         <Route path="/load-ash-throttle" element={<ThrottlingUsingLoadash />} />
         <Route path="/hook-debounce" element={<DebouncingUsingHook />} />
