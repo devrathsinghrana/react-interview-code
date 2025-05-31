@@ -3,6 +3,110 @@ import React from "react";
 const SetVsMap = () => {
   const codeString = `
 
+  //Great! Let’s take the CV Builder Website example from your 
+  // resume and walk through a scenario where using a Map 
+  // is more effective than a plain object.
+/*  🧩 Scenario: Managing Multi-Step Form (CV Sections)
+In a CV builder, users typically go through multiple steps like:
+
+Personal Information
+
+Education
+
+Experience
+
+Skills
+
+Preview
+
+You want to map step numbers to section data or UI components and ensure:
+
+Order is preserved
+
+Step numbers (numbers) are the keys
+
+Easy iteration and dynamic step updates
+*/
+
+const stepss = {
+  1: "Personal Information",
+  2: "Education",
+  3: "Experience",
+  4: "Skills",
+  5: "Preview"
+};
+
+for (const step in stepss) {
+  console.log(step+":"+stepss[step]);
+}
+
+/*
+Not ideal — keys are auto-converted to strings, and iteration with for...in can pull in 
+prototype keys if you're not careful.
+*/
+
+// Adding a method to Object.prototype (simulating external code or a library side effect)
+Object.prototype.extrapropertyy = "I'm inherited";
+
+const stepsss = {
+  1: "Personal Info",
+  2: "Education",
+  3: "Experience"
+};
+
+// Iterate using for...in
+for (const key in stepsss) {
+  console.log(key+":" +stepsss[key]);
+}
+
+//✅ Using Map (Recommended):
+const steps = new Map([
+  [1, "Personal Information"],
+  [2, "Education"],
+  [3, "Experience"],
+  [4, "Skills"],
+  [5, "Preview"]
+]);
+
+// Iterate with order preserved
+steps.forEach((label, stepNumber) => {
+  console.log("Step" +stepNumber+":" +label);
+});
+
+//💡 Bonus: Dynamically Update Steps
+// Add a new step
+steps.set(6, "References");
+
+// Remove a step
+steps.delete(4); // Removes "Skills"
+
+// Check if a step exists
+if (steps.has(3)) {
+  console.log("Experience step is present");
+}
+//🧪 In React – Tracking Form Components
+const stepComponents = new Map([
+  [1, "<PersonalInfo />"],
+  [2, "<Education />"],
+  [3, "<Experience />"],
+  [4, "<Skills />"],
+  [5, "<Preview />"],
+]);
+
+function RenderStep({ currentStep }) {
+  return stepComponents.get(currentStep) || "<NotFound />";
+}
+
+/*
+🎯 Why Map is better here:
+Feature	                   Object	                         Map
+Maintains insertion order	 ❌ Inconsistent	               ✅ Yes
+Non-string keys	           ❌ Converted to string	       ✅ Real numbers
+Easy to iterate	           ❌ Extra steps	               ✅ Built-in methods
+Dynamic add/delete	       ✅, but clunky	               ✅ Smooth
+*/
+
+
   // identify duplicate and unique email id and the count of duplicates using set and map
 
   const users = [
