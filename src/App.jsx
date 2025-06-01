@@ -19,6 +19,7 @@ import FunctionCurryingAndRecusrsion from "./apps/FunctionCurryingAndRecusrsion"
 import CartPage from "./apps/CartPage";
 import WeakSetWeakMap from "./apps/WeakSetWeakMap";
 import TailwindCssApp from "./apps/TailwindCssApp";
+import VirtualDom from "./apps/VirtualDom";
 
 function App() {
   return (
@@ -85,6 +86,9 @@ function App() {
         <div>
           <Link to={"/tailwind-css-example"}>Tailwind css example App</Link>
         </div>
+        <div>
+          <Link to={"/virtual-dom"}>Virtual Dom App</Link>
+        </div>
       </div>
 
       <Routes>
@@ -121,6 +125,7 @@ function App() {
         />
         <Route path="/set-vs-map" element={<SetVsMap />} />
         <Route path="/call-apply-bind" element={<CallApplyBind />} />
+        <Route path="/virtual-dom" element={<VirtualDom />} />
         <Route
           path="/react-create-element"
           element={<MakingInputUsingCreateElement />}
