@@ -21,6 +21,7 @@ import WeakSetWeakMap from "./apps/WeakSetWeakMap";
 import TailwindCssApp from "./apps/TailwindCssApp";
 import VirtualDom from "./apps/VirtualDom";
 import Webpack from "./apps/Webpack";
+import SEO from "./apps/SEO";
 
 function App() {
   return (
@@ -89,7 +90,12 @@ function App() {
         </div>
         <div>
           <Link to={"/virtual-dom"}>Virtual Dom App</Link>
+        </div>
+        <div>
           <Link to={"/webpack"}>Webpack App</Link>
+        </div>
+        <div>
+          <Link to={"/seo"}>SEO App</Link>
         </div>
       </div>
 
@@ -105,6 +111,7 @@ function App() {
         <Route path="/optional-spreading" element={<OptionalSpreadingApp />} />
         <Route path="/retry-payment-saga" element={<RetryPaymentApp />} />
         <Route path="/cart-app" element={<CartPage />} />
+        <Route path="/seo" element={<SEO />} />
         <Route
           path="/currying-recursion"
           element={<FunctionCurryingAndRecusrsion />}
