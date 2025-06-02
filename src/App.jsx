@@ -20,6 +20,7 @@ import CartPage from "./apps/CartPage";
 import WeakSetWeakMap from "./apps/WeakSetWeakMap";
 import TailwindCssApp from "./apps/TailwindCssApp";
 import VirtualDom from "./apps/VirtualDom";
+import Webpack from "./apps/Webpack";
 
 function App() {
   return (
@@ -88,6 +89,7 @@ function App() {
         </div>
         <div>
           <Link to={"/virtual-dom"}>Virtual Dom App</Link>
+          <Link to={"/webpack"}>Webpack App</Link>
         </div>
       </div>
 
@@ -124,6 +126,7 @@ function App() {
           element={<DebouncingUsingSetTimeout />}
         />
         <Route path="/set-vs-map" element={<SetVsMap />} />
+        <Route path="/webpack" element={<Webpack />} />
         <Route path="/call-apply-bind" element={<CallApplyBind />} />
         <Route path="/virtual-dom" element={<VirtualDom />} />
         <Route
