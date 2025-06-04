@@ -25,6 +25,10 @@ import SEO from "./apps/SEO";
 import ControlledUncontrolled from "./apps/ControlledUncontrolled";
 import Formik from "./apps/Formik";
 import ReactHookForm from "./apps/ReactHookForm";
+import Proptypes from "./apps/Proptypes";
+import HigherOrderComponentExample from "./apps/HigherOrderComponentExample";
+import Hooks from "./apps/Hooks";
+import ThrottlingAndDebouncingInPureJS from "./apps/ThrottlingAndDebouncingInPureJS";
 
 function App() {
   return (
@@ -111,6 +115,20 @@ function App() {
         <div>
           <Link to={"/ReactHookForm"}>ReactHookForm App</Link>
         </div>
+        <div>
+          <Link to={"/prop-types"}>Proptypes App</Link>
+        </div>
+        <div>
+          <Link to={"/hoc-component"}>HOC App</Link>
+        </div>
+        <div>
+          <Link to={"/hooks"}>Hooks App</Link>
+        </div>
+        <div>
+          <Link to={"/throttle-debounce-js"}>
+            Throttle and Debounce in JS App
+          </Link>
+        </div>
       </div>
 
       <Routes>
@@ -160,6 +178,16 @@ function App() {
         />
         <Route path="/formik" element={<Formik />} />
         <Route path="/ReactHookForm" element={<ReactHookForm />} />
+        <Route path="/prop-types" element={<Proptypes />} />
+        <Route
+          path="/hoc-component"
+          element={<HigherOrderComponentExample />}
+        />
+        <Route path="/hooks" element={<Hooks />} />
+        <Route
+          path="/throttle-debounce-js"
+          element={<ThrottlingAndDebouncingInPureJS />}
+        />
       </Routes>
     </>
   );

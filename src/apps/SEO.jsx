@@ -1,13 +1,15 @@
-import { Head, Title, Meta } from "@tanstack/react-head";
-
 export default function SEO() {
+  const reqStr = `FOR react 19 we can directly use meta tags and for older versions we can go for tanstack/react-router or react-helmet`;
   return (
     <>
-      <Head>
-        <Title>My Page Title</Title>
-        <Meta name="description" content="My page description" />
-      </Head>
-      <div>SEO</div>
+      <title>{"blog SEO"}</title>
+      <meta name="author" content="Josh" />
+      <link rel="author" href="https://twitter.com/joshcstory/" />
+      <meta name="keywords" content={"devrath, singh, rana"} />
+      <div>
+        SEO
+        <pre style={{ whiteSpace: "pre-wrap" }}>{reqStr}</pre>
+      </div>
     </>
   );
 }
