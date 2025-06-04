@@ -22,6 +22,9 @@ import TailwindCssApp from "./apps/TailwindCssApp";
 import VirtualDom from "./apps/VirtualDom";
 import Webpack from "./apps/Webpack";
 import SEO from "./apps/SEO";
+import ControlledUncontrolled from "./apps/ControlledUncontrolled";
+import Formik from "./apps/Formik";
+import ReactHookForm from "./apps/ReactHookForm";
 
 function App() {
   return (
@@ -97,6 +100,17 @@ function App() {
         <div>
           <Link to={"/seo"}>SEO App</Link>
         </div>
+        <div>
+          <Link to={"/controlled-uncontrolled"}>
+            Controlled Uncontrolled App
+          </Link>
+        </div>
+        <div>
+          <Link to={"/formik"}>Formik App</Link>
+        </div>
+        <div>
+          <Link to={"/ReactHookForm"}>ReactHookForm App</Link>
+        </div>
       </div>
 
       <Routes>
@@ -140,6 +154,12 @@ function App() {
           path="/react-create-element"
           element={<MakingInputUsingCreateElement />}
         />
+        <Route
+          path="/controlled-uncontrolled"
+          element={<ControlledUncontrolled />}
+        />
+        <Route path="/formik" element={<Formik />} />
+        <Route path="/ReactHookForm" element={<ReactHookForm />} />
       </Routes>
     </>
   );
