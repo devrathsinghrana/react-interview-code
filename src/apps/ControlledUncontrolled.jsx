@@ -59,11 +59,38 @@ const inputRef = useRef(null);
 
 Let me know if you want a one-liner, whiteboard version, or interviewer-focused storytelling format.
 `;
-
+const [inputFields, setInputFields] = React.useReducer(reducerFn, {
+    username: "",
+  });
+  const formFields = React.useRef({
+    username: "",
+  });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+  const handleFormFields = (e, actionType) => {
+    setInputFields({
+      type: actionType,
+      payload: e.target.value,
+    });
+  };
+  console.log("formFields>>>", formFields);
+  console.log("inputFields>>>", inputFields);
   return (
     <div>
       ControlledUncontrolled
       <pre style={{ whiteSpace: "pre-wrap" }}>{reqStr}</pre>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="username">Username</label>
+          <input
+            name="username"
+            id="username"
+            type="text"
+            onChange={(e) => handleFormFields(e, "CHANGE_USERNAME")}
+          />
+        </div>
+      </form>
     </div>
   );
 };
