@@ -1,4 +1,5 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 
 const ReactHookForm = () => {
   const reqStr = `
@@ -79,10 +80,32 @@ function ContactForm() {
 
 Let me know if you want a deeper example using RHF with **Yup validation**, **dynamic fields**, or integration with **Material UI / Chakra / Tailwind**.
 `;
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log("Form Data:", data);
+  };
   return (
     <div>
       ReactHookForm
       <pre style={{ whiteSpace: "pre-wrap" }}>{reqStr}</pre>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <input {...register("name", { required: true })} placeholder="Name" />
+        {errors.name && <p>Name is required</p>}
+
+        <input
+          type="email"
+          {...register("email", { required: true })}
+          placeholder="Email"
+        />
+        {errors.email && <p>Email is required</p>}
+
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
 };

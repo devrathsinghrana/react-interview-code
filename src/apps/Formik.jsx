@@ -1,4 +1,11 @@
 import React from "react";
+import { Formik as FormikProvider, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+
+const SignupSchema = Yup.object({
+  email: Yup.string().email().required(),
+  password: Yup.string().min(6).required(),
+});
 
 const Formik = () => {
   const reqStr = `
@@ -79,10 +86,34 @@ const SignupSchema = Yup.object({
 
 Let me know if you'd like to tailor this further for a resume bullet, mock interview Q\&A, or a specific project context.
 `;
+
   return (
     <div>
       Formik
       <pre style={{ whiteSpace: "pre-wrap" }}>{reqStr}</pre>
+      <FormikProvider
+        initialValues={{ email: "", password: "" }}
+        validationSchema={SignupSchema}
+        onSubmit={(values) => {
+          console.log("Submitted:", values);
+        }}
+      >
+        <Form>
+          <div>
+            <label htmlFor="email"> Email</label>
+            <Field name="email" type="email" id="email" />
+            <ErrorMessage name="email" />
+          </div>
+
+          <div>
+            <label htmlFor="password"> Password</label>
+            <Field name="password" type="password" id="password" />
+            <ErrorMessage name="password" />
+          </div>
+
+          <button type="submit">Submit</button>
+        </Form>
+      </FormikProvider>
     </div>
   );
 };

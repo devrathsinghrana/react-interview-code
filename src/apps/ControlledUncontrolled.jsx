@@ -1,5 +1,12 @@
 import React from "react";
 
+const reducerFn = (state, action) => {
+  if (action.type == "CHANGE_USERNAME") {
+    return { ...state, username: action.payload };
+  }
+  return state;
+};
+
 const ControlledUncontrolled = () => {
   const reqStr = `
     Based on your resume—highlighting **5+ years of React.js experience** with a **strong UI development background**—you should explain **Controlled vs Uncontrolled Components** in a way that reflects both your depth of knowledge and real-world experience with form handling.

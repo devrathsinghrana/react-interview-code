@@ -178,7 +178,18 @@ function App() {
         />
         <Route path="/formik" element={<Formik />} />
         <Route path="/ReactHookForm" element={<ReactHookForm />} />
-        <Route path="/prop-types" element={<Proptypes />} />
+        <Route
+          path="/prop-types"
+          element={
+            <Proptypes
+              {...{
+                name: "devrath",
+                age: 23,
+                isActive: false,
+              }}
+            />
+          }
+        />
         <Route
           path="/hoc-component"
           element={<HigherOrderComponentExample />}

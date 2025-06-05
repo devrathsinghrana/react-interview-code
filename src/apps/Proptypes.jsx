@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const Proptypes = () => {
+const Proptypes = ({ name, age, isActive }) => {
   const reqStr = `
     Based on your **5+ years of React.js experience** and focus on **UI development**, here’s how you can explain **PropTypes** (note: it's not a hook) in a way that reflects your level and real-world usage.
 
@@ -75,8 +76,19 @@ Let me know if you want a version showing **complex shapes**, **array of objects
     <div>
       Proptypes
       <pre style={{ whiteSpace: "pre-wrap" }}>{reqStr}</pre>
+      <div>
+        <h3>{name}</h3>
+        <p>Age: {age}</p>
+        <p>Status: {isActive ? "Active" : "Inactive"}</p>
+      </div>
     </div>
   );
+};
+
+Proptypes.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number,
+  isActive: PropTypes.bool,
 };
 
 export default Proptypes;
