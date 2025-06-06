@@ -29,6 +29,7 @@ import Proptypes from "./apps/Proptypes";
 import HigherOrderComponentExample from "./apps/HigherOrderComponentExample";
 import Hooks from "./apps/Hooks";
 import ThrottlingAndDebouncingInPureJS from "./apps/ThrottlingAndDebouncingInPureJS";
+import FlattenArrayOfObjects from "./apps/FlattenArrayOfObjects";
 
 function App() {
   return (
@@ -129,6 +130,11 @@ function App() {
             Throttle and Debounce in JS App
           </Link>
         </div>
+        <div>
+          <Link to={"/flatten-arr-of-obj"}>
+            FlattenArrayOfObjects App
+          </Link>
+        </div>
       </div>
 
       <Routes>
@@ -195,6 +201,7 @@ function App() {
           element={<HigherOrderComponentExample />}
         />
         <Route path="/hooks" element={<Hooks />} />
+        <Route path="/flatten-arr-of-obj" element={<FlattenArrayOfObjects />} />
         <Route
           path="/throttle-debounce-js"
           element={<ThrottlingAndDebouncingInPureJS />}
