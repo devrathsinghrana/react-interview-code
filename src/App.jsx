@@ -31,6 +31,8 @@ import Hooks from "./apps/Hooks";
 import ThrottlingAndDebouncingInPureJS from "./apps/ThrottlingAndDebouncingInPureJS";
 import FlattenArrayOfObjects from "./apps/FlattenArrayOfObjects";
 import FlattenArr from "./apps/FlattenArr";
+import CheckForValidBrackets from "./apps/CheckForValidBrackets";
+import MakeUseFetchHookAndUseIt from "./apps/makeUseFetchHookAndUseIt";
 
 function App() {
   return (
@@ -141,11 +143,23 @@ function App() {
             FlattenArray App
           </Link>
         </div>
+        <div>
+          <Link to={"/check-for-valid-brackets-app"}>
+            check-for-valid-brackets-app
+          </Link>
+        </div>
+         <div>
+          <Link to={"/use-fetch-custom-hook-app"}>
+            use-fetch-custom-hook-app
+          </Link>
+        </div>
       </div>
 
       <Routes>
         <Route index element={<ThrottlingUsingCustomHooks />} />
         <Route path="/payment-app" element={<PaymentComponent />} />
+        <Route path="/use-fetch-custom-hook-app" element={<MakeUseFetchHookAndUseIt />} />
+        <Route path="/check-for-valid-brackets-app" element={<CheckForValidBrackets />} />
         <Route path="/tailwind-css-example" element={<TailwindCssApp />} />
         <Route path="/weak-set-map-app" element={<WeakSetWeakMap />} />
         <Route path="/load-ash-throttle" element={<ThrottlingUsingLoadash />} />
