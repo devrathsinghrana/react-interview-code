@@ -33,6 +33,7 @@ import FlattenArrayOfObjects from "./apps/FlattenArrayOfObjects";
 import FlattenArr from "./apps/FlattenArr";
 import CheckForValidBrackets from "./apps/CheckForValidBrackets";
 import MakeUseFetchHookAndUseIt from "./apps/makeUseFetchHookAndUseIt";
+import MakeOtpInputBox from "./apps/MakeOtpInputBox";
 
 function App() {
   return (
@@ -153,6 +154,11 @@ function App() {
             use-fetch-custom-hook-app
           </Link>
         </div>
+        <div>
+          <Link to={"/otp-input-box"}>
+            otp-input-box-app
+          </Link>
+        </div>
       </div>
 
       <Routes>
@@ -203,6 +209,7 @@ function App() {
           element={<ControlledUncontrolled />}
         />
         <Route path="/formik" element={<Formik />} />
+        <Route path="/otp-input-box" element={<MakeOtpInputBox />} />
         <Route path="/ReactHookForm" element={<ReactHookForm />} />
         <Route
           path="/prop-types"
